@@ -1,0 +1,17 @@
+.remove-btn,
+.item-checked-btn{
+    margin-right:5px;
+}
+
+.checklist-item{
+    display: block;
+    width:100%;
+    margin:10px;
+}
+
+.checklist-item .content{
+    word-break: break-all;
+    max-width: 60%!important;
+    margin-right:10px;
+    line-height: 50px;
+}
