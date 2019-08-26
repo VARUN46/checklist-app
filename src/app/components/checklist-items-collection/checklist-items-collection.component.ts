@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ListItem } from 'src/app/services/list/listItem';
 import { ListService } from 'src/app/services/list/list.service';
+import { PrintService } from 'src/app/services/print/print.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checklist-items-collection',
@@ -9,7 +10,9 @@ import { ListService } from 'src/app/services/list/list.service';
 })
 export class ChecklistItemsCollectionComponent implements OnInit {
 
-  constructor(public svc: ListService) {
+  constructor(public svc: ListService,
+              public printSvc: PrintService,
+              public router: Router) {
   }
 
   ngOnInit() {
@@ -19,4 +22,13 @@ export class ChecklistItemsCollectionComponent implements OnInit {
   trackByIndex(index, item) {
     return index;
   }
+
+  resetItemsCheck() {
+    this.svc.resetItemsChecklist();
+  }
+
+  printChecklist() {
+    this.router.navigate(['/print']);
+  }
+
 }

@@ -8,6 +8,7 @@ import { ChecklistItemsCollectionComponent } from './components/checklist-items-
 import { ChecklistItemCreatorComponent } from './components/checklist-item-creator/checklist-item-creator.component';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChecklistPrintComponent } from './components/checklist-print/checklist-print.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ChecklistItemComponent,
     ChecklistItemsCollectionComponent,
     ChecklistItemCreatorComponent,
-    HomeComponent
+    HomeComponent,
+    ChecklistPrintComponent
   ],
   imports: [
     BrowserModule,

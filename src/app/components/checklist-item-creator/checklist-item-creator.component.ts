@@ -22,4 +22,5 @@ export class ChecklistItemCreatorComponent implements OnInit {
     this.svc.addItem(item);
   }
 
+
 }

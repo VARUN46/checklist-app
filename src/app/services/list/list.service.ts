@@ -61,4 +61,11 @@ export class ListService {
     this.pushToStorage();
   }
 
+  resetItemsChecklist() {
+    this.itemsList.forEach((entry, index) => {
+      this.itemsList[index].checked = false;
+    });
+    this.pushToStorage();
+  }
+
 }
