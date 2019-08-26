@@ -10,11 +10,12 @@ export class ListService {
   private id: number;
   constructor() {
     this.itemsList = this.getItems();
-    const dataForId = this.getItems()[this.getItems().length - 1];
-    if (typeof(dataForId) === 'undefined'){
+    if (this.itemsList === null) {
+      this.itemsList = [];
       this.id = 0;
     } else {
-      this.id = dataForId.id;
+      const idItem  = this.itemsList[this.itemsList.length - 1];
+      this.id = idItem.id;
     }
    }
 
