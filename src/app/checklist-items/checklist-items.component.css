@@ -1,0 +1,14 @@
+.create-activity-area button,
+.create-activity-area input{
+    border-radius:0!important;
+}
+
+.create-activity-area button:first-child{
+    border-top-left-radius: 10px!important;
+    border-bottom-left-radius: 10px!important;
+}
+
+.create-activity-area button:last-child{
+    border-top-right-radius: 10px!important;
+    border-bottom-right-radius: 10px!important;
+}

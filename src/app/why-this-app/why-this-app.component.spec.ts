@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChecklistPrintComponent } from './checklist-print.component';
+import { WhyThisAppComponent } from './why-this-app.component';
 
-describe('ChecklistPrintComponent', () => {
-  let component: ChecklistPrintComponent;
-  let fixture: ComponentFixture<ChecklistPrintComponent>;
+describe('WhyThisAppComponent', () => {
+  let component: WhyThisAppComponent;
+  let fixture: ComponentFixture<WhyThisAppComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChecklistPrintComponent ]
+      declarations: [ WhyThisAppComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChecklistPrintComponent);
+    fixture = TestBed.createComponent(WhyThisAppComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,21 @@
+<br />
+
+
+<div class="row create-activity-area">
+<button (click)="resetAcivityState()" class="btn btn-warning col">Reset Checklist</button>
+<input [(ngModel)]="this.item.taskName"  
+placeholder="Name of Checklist Task" class="form-control col-7"> 
+<button (click)="addNewItem(item)" class="btn btn-success col">Add</button>
+<button (click)="removeAll()" class="btn btn-danger col">Remove All</button>
+</div>
+
+<br />
+
+<div class="row">
+<app-checklist-item *ngFor="let item of items" 
+title="{{ item.taskName }}"
+id="{{ item.id }}" 
+[isChecked]="item.isChecked"
+class="col-sm-4"
+></app-checklist-item>
+</div>

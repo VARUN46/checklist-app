@@ -1,28 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ChecklistItemComponent } from './components/checklist-item/checklist-item.component';
-import { ChecklistItemsCollectionComponent } from './components/checklist-items-collection/checklist-items-collection.component';
-import { ChecklistItemCreatorComponent } from './components/checklist-item-creator/checklist-item-creator.component';
-import { HomeComponent } from './components/home/home.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ChecklistPrintComponent } from './components/checklist-print/checklist-print.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { ChecklistItemComponent } from './checklist-item/checklist-item.component';
+import { ChecklistItemsComponent } from './checklist-items/checklist-items.component';
+import { WhyThisAppComponent } from './why-this-app/why-this-app.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ChecklistItemComponent,
-    ChecklistItemsCollectionComponent,
-    ChecklistItemCreatorComponent,
-    HomeComponent,
-    ChecklistPrintComponent
+    ChecklistItemsComponent,
+    WhyThisAppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    FormsModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
