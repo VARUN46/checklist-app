@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Item } from '../entities/item';
+import { GlobalNotificationManagerService } from '../services/global-notification-manager.service';
+import { Notification } from '../entities/notification';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +10,10 @@ export class ItemsManagerService {
 
   public cacheKey = 'CachedData';
   public InMemoryViewData: Array<Item> = new Array<Item>(); /** Not to be reassigned, memory reference must remain constant */
+  public notificationSvc: GlobalNotificationManagerService;
 
-  constructor() {
+  constructor(notificationSvc: GlobalNotificationManagerService) {
+    this.notificationSvc = notificationSvc;
     this.syncInMemoryData(this.getAll());
   }
 
@@ -33,6 +37,10 @@ export class ItemsManagerService {
     const items: Array<Item> = this.getAll();
     items.splice(0, items.length);
     this.localCacheData(items);
+    const notification: Notification = new Notification();
+    notification.message = 'All Tasks Removed';
+    this.notificationSvc.add(notification);
+
   }
 
   getAll() {
@@ -84,6 +92,9 @@ export class ItemsManagerService {
       items[index].isChecked = false;
     });
     this.localCacheData(items);
+    const notification: Notification = new Notification();
+    notification.message = 'All Tasks State is Reset';
+    this.notificationSvc.add(notification);
   }
 
   syncInMemoryData(data: Array<Item>) {

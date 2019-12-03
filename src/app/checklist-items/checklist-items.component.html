@@ -2,11 +2,11 @@
 
 
 <div class="row create-activity-area">
-<button (click)="resetAcivityState()" class="btn btn-warning col">Reset Checklist</button>
+<button (click)="resetAcivityState()" class="btn btn-warning col-12 col-sm-2">Reset Checklist</button>
 <input [(ngModel)]="this.item.taskName"  
-placeholder="Name of Checklist Task" class="form-control col-7"> 
-<button (click)="addNewItem(item)" class="btn btn-success col">Add</button>
-<button (click)="removeAll()" class="btn btn-danger col">Remove All</button>
+placeholder="Name of Checklist Task" class="form-control col-12 col-sm-6"> 
+<button (click)="addNewItem(item)" class="btn btn-success col-6 col-sm-2">Add</button>
+<button (click)="removeAll()" class="btn btn-danger col-6 col-sm-2">Remove All</button>
 </div>
 
 <br />

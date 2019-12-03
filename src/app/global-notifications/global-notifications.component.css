@@ -1,0 +1,18 @@
+#notifications-buttons{
+    position: fixed;
+    z-index: 9999;
+    top: 10px;
+    right: 10px;
+}
+
+#global-notifications{
+    position: fixed;
+    top:10px;
+    z-index:9999;
+    width:100%;
+}
+
+#global-notifications button{
+    display: block;
+    margin-bottom: 20px;
+}

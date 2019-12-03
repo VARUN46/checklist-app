@@ -23,9 +23,9 @@ export class ChecklistItemComponent implements OnInit {
 
   ngOnInit() {
     if (this.isChecked) {
-      this.checkedString = 'btn btn-success';
-    } else {
       this.checkedString = 'btn btn-primary';
+    } else {
+      this.checkedString = 'btn btn-success';
     }
   }
 

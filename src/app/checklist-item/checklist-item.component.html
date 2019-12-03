@@ -5,7 +5,7 @@
 <div class="card-footer">
         <div class="btn-group" role="group" aria-label="Manage-Group">
     <button [class]="checkedString" 
-        (click)="changeCheckStateOfItem(id)">{{isChecked?'Un-Check':'Check'}}</button>
+        (click)="changeCheckStateOfItem(id)">{{isChecked?'Un-Done':'Done'}}</button>
 
         <button class="btn btn-danger" (click)="deleteItem(id)">Delete</button>
     </div>

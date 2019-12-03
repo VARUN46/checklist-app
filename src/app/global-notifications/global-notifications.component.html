@@ -1,0 +1,19 @@
+<div *ngIf="this.notificationService.isVisible" id="global-notifications">
+<div class="container">
+
+<div *ngFor="let notification of notifications">
+    <div class="alert alert-{{ notification.type }}" role="alert">
+        {{ notification.message }}
+    </div>
+</div>
+    
+<div id="notifications-buttons">
+<button  
+class="btn btn-info" (click)="clearClickHandler()">Clear</button>
+
+<button 
+class="btn btn-info" (click)="hideClickHandler()">Hide</button>
+</div>
+
+</div>
+</div>

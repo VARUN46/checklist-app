@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { ChecklistItemComponent } from './checklist-item/checklist-item.component';
 import { ChecklistItemsComponent } from './checklist-items/checklist-items.component';
 import { WhyThisAppComponent } from './why-this-app/why-this-app.component';
+import { GlobalNotificationsComponent } from './global-notifications/global-notifications.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { WhyThisAppComponent } from './why-this-app/why-this-app.component';
     ChecklistItemComponent,
     ChecklistItemsComponent,
     WhyThisAppComponent,
+    GlobalNotificationsComponent,
   ],
   imports: [
     BrowserModule,
